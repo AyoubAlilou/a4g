@@ -1,8 +1,22 @@
+import React from 'react'
+import Mdex from './Pages/Mdex'
+import Classe from './Pages/Classe'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Blog from './Pages/Blog'
+import About from './Pages/About'
 function App() {
   return (
     <>
-      <h1 className='title'>c4a.dev</h1>
-      <h1>hello</h1>
+      <div>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Mdex />} />
+            <Route path='/classe' element={<Classe />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   )
 }
